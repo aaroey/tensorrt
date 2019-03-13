@@ -1,33 +1,38 @@
 set -x
 
+export PYTHONPATH=/usr/local/google/home/laigd/Workspace/aaroey/mymodels:$PYTHONPATH
 cd tftrt/examples/image-classification
 
 run() {
-  use_trt=--use_trt
-  trttag='trt'
+  local use_trt=--use_trt
+  local trttag='trt'
   if [[ "$precision" == 'FP32' ]]; then
     use_trt=''
     trttag=notrt
   fi
+  local dataflags=--use_synthetic
+  if [[ "$use_data" ]]; then
+    local data_dir=$HOME/team_brain/imagenet-data/for-tftrtrepo-from-nvtfdocker-v18.08-py3
+    dataflags="--data_dir $data_dir --calib_data_dir $data_dir"
+  fi
 
   python -u image_classification.py \
     --model $net \
-    --use_synthetic \
-    --data_dir /home/laigd/tftrtrepo/data \
+    "$dataflags" \
     --mode benchmark \
-    --calib_data_dir /home/laigd/tftrtrepo/data \
     --batch_size $batch  \
-    --num_iterations 200 \
+    --num_warmup_iterations 1 \
+    --num_iterations 2 \
     $use_trt \
     --precision $precision \
     --mode=benchmark \
     --num_calib_inputs $batch \
-    > ~/tftrtrepo/log.$net.$trttag.$precision.batch$batch 2>&1
+    > ~/Workspace/aaroey/mytftrtrepo/logs/log.$net.$trttag.$precision.batch$batch 2>&1
 }
 
-for net in resnet_v1_50; do
-  for precision in FP32 FP16 INT8; do
-    for batch in 1 8 128; do
+for net in mobilenet_v2; do
+  for precision in INT8 FP32 FP16; do
+    for batch in 1; do
       net=$net precision=$precision batch=$batch run
     done
   done
