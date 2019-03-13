@@ -1,0 +1,84 @@
+2019-03-05 20:32:19.646773: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-03-05 20:32:19.651274: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 20:32:25.642466: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1009] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-05 20:32:25.643381: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 20:32:25.643495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-05 20:32:25.643530: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 20:32:25.643581: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 20:32:25.644691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 20:32:25.644721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 20:32:25.644730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 20:32:25.644971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('Using checkpoint:', './data/vgg_19/vgg_19.ckpt')
+WARNING: Logging before flag parsing goes to stderr.
+W0305 20:32:26.108253 140717819201280 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+W0305 20:32:29.157563 140717819201280 deprecation.py:323] From image_classification.py:416: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+W0305 20:32:29.157865 140717819201280 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/framework/graph_util_impl.py:247: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+2019-03-05 20:32:36.072102: I tensorflow/core/grappler/devices.cc:50] Number of eligible GPUs (core count >= 8): 1
+2019-03-05 20:32:36.072415: I tensorflow/core/grappler/clusters/single_machine.cc:359] Starting new session
+2019-03-05 20:32:36.072861: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 20:32:36.270145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 20:32:36.270228: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 20:32:36.270247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 20:32:36.270498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2019-03-05 20:32:56.795557: I tensorflow/compiler/tf2tensorrt/segment/segment.cc:456] There are 5 ops of 4 different types in the graph that are not converted to TensorRT: ArgMax, Identity, Placeholder, NoOp, (For more information see https://docs.nvidia.com/deeplearning/dgx/integrate-tf-trt/index.html#support-ops).
+2019-03-05 20:32:56.796976: I tensorflow/compiler/tf2tensorrt/convert/convert_graph.cc:839] Number of TensorRT candidate segments: 1
+2019-03-05 20:32:58.675828: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 20:33:04.711382: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-03-05 20:33:06.307827: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-03-05 20:34:03.813412: I tensorflow/compiler/tf2tensorrt/convert/convert_graph.cc:939] TensorRT node TRTEngineOp_0 added for segment 0 consisting of 106 nodes succeeded.
+2019-03-05 20:34:05.329727: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:666] Optimization results for grappler item: tf_graph
+2019-03-05 20:34:05.329797: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   constant folding: Graph size after: 106 nodes (-38), 105 edges (-38), time = 8929.85254ms.
+2019-03-05 20:34:05.329837: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   layout: Graph size after: 110 nodes (4), 109 edges (4), time = 2146.64502ms.
+2019-03-05 20:34:05.329848: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   constant folding: Graph size after: 110 nodes (0), 109 edges (0), time = 2992.34204ms.
+2019-03-05 20:34:05.329862: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   TensorRTOptimizer: Graph size after: 5 nodes (-105), 4 edges (-105), time = 71299.5938ms.
+batch_size: 1
+cache: False
+calib_data_dir: /home/laigd/tftrtrepo/data
+data_dir: /home/laigd/tftrtrepo/data
+default_models_dir: ./data
+display_every: 100
+max_workspace_size: 4294967296
+minimum_segment_size: 2
+mode: benchmark
+model: vgg_19
+model_dir: None
+num_calib_inputs: 1
+num_iterations: 200
+num_warmup_iterations: 50
+precision: FP16
+target_duration: None
+use_synthetic: True
+use_trt: True
+use_trt_dynamic_op: False
+url: http://download.tensorflow.org/models/vgg_19_2016_08_28.tar.gz
+num_nodes(native_tf): 144
+num_nodes(tftrt_total): 5
+num_nodes(trt_only): 1
+graph_size(MB)(native_tf): 548.1
+graph_size(MB)(trt): 848.8
+time(s)(trt_conversion): 99.3
+running inference...
+W0305 20:34:14.282115 140717819201280 estimator.py:974] Input graph does not use tf.data.Dataset or contain a QueueRunner. That means predict yields forever. This is probably a mistake.
+2019-03-05 20:34:28.499860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 20:34:28.499943: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 20:34:28.499955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 20:34:28.499964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 20:34:28.500150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('    running for target duration from %d', 1551818081.240348)
+    step 100/0, iter_time(ms)=2.7990, images/sec=357
+    step 200/0, iter_time(ms)=2.8179, images/sec=354
+results of vgg_19:
+    images/sec: 352
+    99th_percentile(ms): 3.0
+    total_time(s): 0.4
+    latency_mean(ms): 2.8

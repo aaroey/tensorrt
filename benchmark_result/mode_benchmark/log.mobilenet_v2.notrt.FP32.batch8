@@ -1,0 +1,65 @@
+2019-03-05 20:45:01.769090: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-03-05 20:45:01.773541: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 20:45:08.572997: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1009] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-05 20:45:08.573865: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 20:45:08.573955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-05 20:45:08.573979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 20:45:08.574008: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 20:45:08.575072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 20:45:08.575095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 20:45:08.575104: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 20:45:08.575336: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('Using checkpoint:', './data/mobilenet_v2/mobilenet_v2_1.4_224.ckpt')
+WARNING: Logging before flag parsing goes to stderr.
+W0305 20:45:10.576452 140599476926208 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+W0305 20:45:11.531809 140599476926208 deprecation.py:323] From image_classification.py:416: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+W0305 20:45:11.532052 140599476926208 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/framework/graph_util_impl.py:247: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+batch_size: 8
+cache: False
+calib_data_dir: /home/laigd/tftrtrepo/data
+data_dir: /home/laigd/tftrtrepo/data
+default_models_dir: ./data
+display_every: 100
+max_workspace_size: 4294967296
+minimum_segment_size: 2
+mode: benchmark
+model: mobilenet_v2
+model_dir: None
+num_calib_inputs: 8
+num_iterations: 200
+num_warmup_iterations: 50
+precision: FP32
+target_duration: None
+use_synthetic: True
+use_trt: False
+use_trt_dynamic_op: False
+url: https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.4_224.tgz
+num_nodes(native_tf): 771
+graph_size(MB)(native_tf): 23.6
+running inference...
+W0305 20:45:11.882766 140599476926208 estimator.py:974] Input graph does not use tf.data.Dataset or contain a QueueRunner. That means predict yields forever. This is probably a mistake.
+2019-03-05 20:45:12.087367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 20:45:12.087448: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 20:45:12.087458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 20:45:12.087479: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 20:45:12.087726: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('    running for target duration from %d', 1551818712.287496)
+2019-03-05 20:45:13.507481: E tensorflow/core/common_runtime/executor.cc:636] Executor failed to create kernel. Invalid argument: Default AvgPoolingOp only supports NHWC on device type CPU
+	 [[{{node MobilenetV2/Logits/AvgPool}}]]
+2019-03-05 20:45:13.561376: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+    step 100/0, iter_time(ms)=5.6310, images/sec=1420
+    step 200/0, iter_time(ms)=5.5821, images/sec=1433
+results of mobilenet_v2:
+    images/sec: 1431
+    99th_percentile(ms): 5.8
+    total_time(s): 0.8
+    latency_mean(ms): 5.6

@@ -1,0 +1,212 @@
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+2019-03-05 22:59:21.342164: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-03-05 22:59:21.346450: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 22:59:26.448051: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1009] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-05 22:59:26.448911: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 22:59:26.449004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-05 22:59:26.449028: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 22:59:26.449058: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 22:59:26.450095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 22:59:26.450118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 22:59:26.450127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 22:59:26.450357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('Using checkpoint:', './data/mobilenet_v2/mobilenet_v2_1.4_224.ckpt')
+WARNING: Logging before flag parsing goes to stderr.
+W0305 22:59:28.652183 139884691658496 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+W0305 22:59:29.596632 139884691658496 deprecation.py:323] From image_classification.py:418: convert_variables_to_constants (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.convert_variables_to_constants`
+W0305 22:59:29.596890 139884691658496 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/framework/graph_util_impl.py:247: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+2019-03-05 22:59:30.149273: I tensorflow/core/grappler/devices.cc:50] Number of eligible GPUs (core count >= 8): 1
+2019-03-05 22:59:30.149462: I tensorflow/core/grappler/clusters/single_machine.cc:359] Starting new session
+2019-03-05 22:59:30.149850: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 22:59:30.352166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 22:59:30.352233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 22:59:30.352247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 22:59:30.352532: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2019-03-05 22:59:30.890412: I tensorflow/compiler/tf2tensorrt/segment/segment.cc:456] There are 7 ops of 6 different types in the graph that are not converted to TensorRT: Add, ArgMax, NoOp, Placeholder, Const, Identity, (For more information see https://docs.nvidia.com/deeplearning/dgx/integrate-tf-trt/index.html#support-ops).
+2019-03-05 22:59:30.930515: I tensorflow/compiler/tf2tensorrt/convert/convert_graph.cc:839] Number of TensorRT candidate segments: 1
+2019-03-05 22:59:30.994317: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 22:59:31.005654: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.005764: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.005872: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.005931: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006054: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006108: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006251: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006312: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006482: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006544: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006779: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.006850: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.007045: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.007111: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.007497: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.007582: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.008092: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.008182: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.008710: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.008818: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.009297: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.009389: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.010263: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.010378: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.011385: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.011495: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.012574: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.012703: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.014833: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.014978: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.017464: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.017638: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.020198: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.020370: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.026258: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:31.086838: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-03-05 22:59:32.797519: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2019-03-05 22:59:50.554041: I tensorflow/compiler/tf2tensorrt/convert/convert_graph.cc:939] TensorRT node TRTEngineOp_0 added for segment 0 consisting of 507 nodes succeeded.
+2019-03-05 22:59:50.601209: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:666] Optimization results for grappler item: tf_graph
+2019-03-05 22:59:50.601286: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   constant folding: Graph size after: 509 nodes (-262), 518 edges (-262), time = 243.83ms.
+2019-03-05 22:59:50.601297: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   layout: Graph size after: 513 nodes (4), 522 edges (4), time = 49.272ms.
+2019-03-05 22:59:50.601348: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   constant folding: Graph size after: 513 nodes (0), 522 edges (0), time = 55.159ms.
+2019-03-05 22:59:50.601358: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:668]   TensorRTOptimizer: Graph size after: 7 nodes (-506), 6 edges (-516), time = 19737.9727ms.
+2019-03-05 22:59:51.385282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 22:59:51.385377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 22:59:51.385390: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 22:59:51.385400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 22:59:51.385650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2019-03-05 22:59:52.426670: I tensorflow/compiler/tf2tensorrt/kernels/trt_engine_op.cc:698] Starting calibration thread on device 0, Calibration Resource @ 0x7f37a0014db0
+2019-03-05 22:59:52.464869: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.464968: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465077: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465135: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465270: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465331: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465471: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465528: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465724: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465794: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.465999: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.466063: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.466276: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.466346: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.466789: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.466891: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.467399: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.467485: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.468008: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.468099: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.468652: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.468748: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.469672: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.469781: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.470859: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.470965: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.472052: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.472163: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.474568: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.474741: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.477519: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.477687: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.480556: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.480721: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:52.488646: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 22:59:59.798968: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Total space of persistent layer space is 9105920 on host and 0 on device
+2019-03-05 23:09:18.429305: I tensorflow/compiler/tf2tensorrt/utils/trt_resources.cc:25] Destroying Calibration Resource 
+ Calibrator = 0x7f37a0014e70
+ Builder    = 0
+ Engine     = 0x7f35b48cd870
+ Logger     = 0x7f37a0014e30
+ Allocator  = 0x7f37a0006c10
+ Thread     = 0x7f37a00084b0
+
+batch_size: 128
+cache: False
+calib_data_dir: /home/laigd/tftrtrepo/data
+data_dir: /home/laigd/tftrtrepo/data
+default_models_dir: ./data
+display_every: 100
+max_workspace_size: 4294967296
+minimum_segment_size: 2
+mode: benchmark
+model: mobilenet_v2
+model_dir: None
+num_calib_inputs: 128
+num_iterations: 200
+num_warmup_iterations: 50
+precision: INT8
+target_duration: None
+use_synthetic: True
+use_trt: True
+use_trt_dynamic_op: False
+url: https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.4_224.tgz
+num_nodes(native_tf): 771
+num_nodes(tftrt_total): 7
+num_nodes(trt_only): 1
+graph_size(MB)(native_tf): 23.6
+graph_size(MB)(trt): 47.2
+time(s)(trt_conversion): 20.9
+running inference...
+W0305 23:09:20.463709 139884691658496 estimator.py:974] Input graph does not use tf.data.Dataset or contain a QueueRunner. That means predict yields forever. This is probably a mistake.
+2019-03-05 23:09:20.978156: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 23:09:20.978245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 23:09:20.978258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 23:09:20.978268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 23:09:20.978469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+('    running for target duration from %d', 1551827362.149437)
+2019-03-05 23:09:28.339503: I tensorflow/compiler/tf2tensorrt/kernels/trt_engine_op.cc:613] Building a new TensorRT engine for TRTEngineOp_0 input shapes: [[128,224,224,3]]
+2019-03-05 23:09:28.353239: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353352: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353467: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353525: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353684: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353753: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353894: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.353956: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354140: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354205: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354426: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354509: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354743: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.354815: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.355256: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.355346: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.355870: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.355961: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.356473: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.356562: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.357069: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.357158: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.358063: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.358174: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.359208: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.359323: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.360459: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.360574: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.362766: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.362908: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.365507: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.365672: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.368385: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.368538: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+2019-03-05 23:09:28.374510: W tensorflow/compiler/tf2tensorrt/utils/trt_logger.cc:37] DefaultLogger Tensor DataType is determined at build time for tensors not marked as input or output.
+    step 100/1, iter_time(ms)=30.2250, images/sec=4234
+    step 200/1, iter_time(ms)=30.6520, images/sec=4175
+results of mobilenet_v2:
+    images/sec: 4213
+    99th_percentile(ms): 30.9
+    total_time(s): 4.6
+    latency_mean(ms): 30.4

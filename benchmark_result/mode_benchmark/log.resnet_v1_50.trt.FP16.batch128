@@ -1,0 +1,51 @@
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+2019-03-05 23:37:32.725921: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-03-05 23:37:32.730147: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 23:37:44.504255: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1009] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-05 23:37:44.505141: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-03-05 23:37:44.505239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1467] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.75GiB freeMemory: 15.34GiB
+2019-03-05 23:37:44.505266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1546] Adding visible gpu devices: 0
+2019-03-05 23:37:44.505305: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2019-03-05 23:37:44.506318: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1015] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-05 23:37:44.506341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1021]      0 
+2019-03-05 23:37:44.506350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1034] 0:   N 
+2019-03-05 23:37:44.506579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1149] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14926 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+WARNING: Logging before flag parsing goes to stderr.
+W0305 23:37:44.515002 139963739875072 deprecation.py:323] From /home/laigd/tfmodelsrepo/official/resnet/resnet_model.py:97: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0305 23:37:44.527029 139963739875072 deprecation.py:323] From /home/laigd/tfmodelsrepo/official/resnet/resnet_model.py:54: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.
+W0305 23:37:44.544234 139963739875072 deprecation.py:323] From /home/laigd/tfmodelsrepo/official/resnet/resnet_model.py:519: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0305 23:37:46.086895 139963739875072 deprecation.py:323] From /home/laigd/tfmodelsrepo/official/resnet/resnet_model.py:546: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0305 23:37:46.088057 139963739875072 deprecation.py:506] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/ops/init_ops.py:1257: calling __init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+('Using checkpoint:', './data/resnet_v1_50/model.ckpt-225207')
+W0305 23:37:46.438133 139963739875072 deprecation.py:323] From /home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+Traceback (most recent call last):
+  File "image_classification.py", line 712, in <module>
+    max_workspace_size=args.max_workspace_size)
+  File "image_classification.py", line 555, in get_frozen_graph
+    frozen_graph = build_classification_graph(model, model_dir, default_models_dir)
+  File "image_classification.py", line 412, in build_classification_graph
+    tf_saver.restore(save_path=checkpoint_path, sess=tf_sess)
+  File "/home/laigd/mytfpy2/virtualenv_py2/local/lib/python2.7/site-packages/tensorflow/python/training/saver.py", line 1278, in restore
+    + compat.as_text(save_path))
+ValueError: The passed save_path is not a valid checkpoint: ./data/resnet_v1_50/model.ckpt-225207
