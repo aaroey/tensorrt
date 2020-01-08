@@ -63,7 +63,7 @@ python image_classification.py \
     --model resnet_v1.5_50_tfv2 \
     --mode validation \
     --num_warmup_iterations 50 \
-    --num_calib_inputs 128
+    --num_calib_inputs 128 \
     --display_every 10 \
     --use_trt \
     --optimize_offline \
